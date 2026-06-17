@@ -22,18 +22,17 @@
 
         /* SECÇÃO DE DESTAQUE DA VICENTINA */
         .vicentina-boas-vindas { padding: 60px 20px; text-align: center; background: white; }
-        .avatar-vicentina { font-size: 4rem; margin-bottom: 15px; display: inline-block; animation: aceno 2s infinite ease-in-out; }
-        .vicentina-boas-vindas h2 { color: #1e3f20; font-size: 1.8rem; margin-bottom: 15px; }
+        
+        /* Estilo personalizado para o avatar real da Vicentina */
+        .avatar-vicentina-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid #1e3f20; animation: flutuar 2.5s infinite ease-in-out; }
+        
+        .vicentina-boas-vindas h2 { color: #1e3f20; font-size: 1.8rem; margin-bottom: 15px; font-weight: bold; }
         .vicentina-boas-vindas p { font-size: 1.1rem; color: #555; max-width: 550px; margin: 0 auto 25px auto; }
-        .seta-ajuda { font-size: 1.3rem; color: #2e7d32; font-weight: bold; animation: flutuar 1.5s infinite ease-in-out; }
+        .seta-ajuda { font-size: 1.2rem; color: #2e7d32; font-weight: bold; background: #e8f5e9; display: inline-block; padding: 10px 20px; border-radius: 30px; }
 
-        @keyframes aceno {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(10deg); }
-        }
         @keyframes flutuar {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(8px); }
+            50% { transform: translateY(-6px); }
         }
 
         @media (min-width: 600px) { .site-header-novo h1 { font-size: 2.6rem; } }
@@ -59,14 +58,16 @@
 
     <section class="vicentina-boas-vindas">
         <div class="container-pequeno">
-            <span class="avatar-vicentina">🦜</span>
+            <!-- Chamada oficial do ficheiro avatar_coruja_tawk.jpg -->
+            <img src="avatar-vicentina.png" alt="Vicentina" class="avatar-vicentina-img" onerror="this.src='avatar_coruja_tawk.jpg';">
+            
             <h2>Olá, eu sou a Vicentina!</h2>
             <p>Estou aqui para esclarecer todas as suas dúvidas sobre a agricultura sustentável, o uso inteligente da água e os nossos projetos na região do Sudoeste Alentejano.</p>
-            <div class="seta-ajuda">Clique no balão verde aqui em baixo para falar comigo! 👇</div>
+            <div class="seta-ajuda">Clique no balão para falar comigo!</div>
         </div>
     </section>
 
-    <!-- SCRIPT DA VICENTINA (Em todas as páginas para ela não sumir) -->
+    <!-- SCRIPT DA VICENTINA -->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
