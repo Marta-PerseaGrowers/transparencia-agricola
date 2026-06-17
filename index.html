@@ -170,9 +170,21 @@
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-15px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
-<!-- SCRIPT JAVASCRIPT -->
+<!-- SCRIPT JAVASCRIPT (Modais + Código do Chat Tawk.to) -->
 <script>
+// Funções para abrir/fechar as informações das empresas
 function openModal(modalId) { document.getElementById(modalId).style.display = "block"; }
 function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
 window.onclick = function(event) { if (event.target.className === 'modal-empresa') { event.target.style.display = "none"; } }
+
+// Integração oficial do Chat Tawk.to (Ativa a Vicentina)
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66965be232dca9db2e3fa08c/192tcun47';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
